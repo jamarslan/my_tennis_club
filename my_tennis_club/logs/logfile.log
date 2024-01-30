@@ -1,0 +1,17 @@
+Watching for file changes with StatReloader
+Request received: /
+Response status code: 200
+Request received: /members/
+Response status code: 200
+Request received: /members/details/1/
+Response status code: 200
+Request received: /members/
+Response status code: 200
+Request received: /
+Response status code: 200
+Request received: /members/
+Response status code: 200
+Request received: /members/details/5/
+Response status code: 200
+Request received: /members/
+Response status code: 200

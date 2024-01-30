@@ -41,7 +41,7 @@ class IPBlockingMiddleware:
 
     def __call__(self, request):
         # Check the request's IP address and block if necessary
-        blocked_ips = ['127.0.0.1']  # Add your blocked IPs
+        blocked_ips = ['126.0.0.1']  # Add your blocked IPs
         if request.META['REMOTE_ADDR'] in blocked_ips:
             return HttpResponseForbidden("Access Forbidden")
 

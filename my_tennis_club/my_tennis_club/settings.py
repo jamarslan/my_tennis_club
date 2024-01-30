@@ -27,9 +27,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'members.middleware.TimeMiddleware',
-    'path.to.LoggingMiddleware',
-    'path.to.IPBlockingMiddleware',
-    'path.to.ExceptionPageMiddleware',
+    'members.middleware.LoggingMiddleware',
+    'members.middleware.IPBlockingMiddleware',
+    'members.middleware.ExceptionPageMiddleware',
 ]
 
 ROOT_URLCONF = 'my_tennis_club.urls'
@@ -88,3 +88,21 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'logs/logfile.log',
+        },
+    },
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+}
